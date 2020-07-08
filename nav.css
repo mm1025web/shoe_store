@@ -1,0 +1,13 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.logo{
+    text-transform: uppercase;
+    font-family: fantasy;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+.nav-item{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
