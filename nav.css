@@ -1,13 +1,126 @@
-*{
-    margin: 0;
-    padding: 0;
+body{
+  background-color: #53a6ff;
 }
 .logo{
     text-transform: uppercase;
     font-family: fantasy;
     font-style: italic;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
+    font-size: 27px;
+    /* text-shadow: 3px 3px 0 rgba(0,0,0,1); */
+    text-shadow: 0 1px 0 #ccc,
+    0 2px 0 #c9c9c9,
+    0 3px 0 #bbb,
+    0 4px 0 #b9b9b9,
+    0 5px 0 #aaa,
+    0 6px 1px rgba(0,0,0,.1),
+    0 0 5px rgba(0,0,0,.1),
+    0 1px 3px rgba(0,0,0,.3),
+    0 3px 5px rgba(0,0,0,.2),
+    0 5px 10px rgba(0,0,0,.25),
+    0 10px 10px rgba(0,0,0,.2),
+    0 20px 20px rgba(0,0,0,.15),
+    0 30px 30px rgba(0,0,0,.15);
 }
 .nav-item{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar-toggler {
+    border: none;
+    outline: 0;
+    background: transparent !important;
+    position: absolute;
+    margin-left: 0;
+}
+
+.navbar-toggler:hover {
+    background: transparent !important;
+    border: none;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: 0;
+} 
+
+
+@media (max-width: 768px) {
+    .navbar-brand{
+        margin-left: 40px;
+        z-index: 9999;
+    }
+
+    .nav-item{
+      display: flex;
+      justify-content: center;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 0px;
+        left: -75%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        /* width: 75%; */
+        width: 50vw;
+        height: 100vh;
+        transition: all 0.3s ease;
+        background-color: #007bff;
+        z-index: -1111111;
+    }
+    .firstLink{
+      margin-top: 70px;
+    }
+    .navbar-collapse.collapsing {
+        height: 100vh !important;
+        margin-right: 50%;
+        transition: all 0.3s ease;
+        display: block;
+    }
+    .navbar-collapse.show {
+        left: 0%;
+    }
+    .icon-bar {
+      width: 22px; 
+      height: 2px;
+      background-color: #202020;
+      display: block;
+      transition: all 0.5s;
+      transition-delay: 0.2s;
+      margin-top: 4px;
+      margin-left: -10px;
+      z-index: 999999999999;
+    }
+     
+    .navbar-toggler .top-bar {
+      transform: rotate(45deg);
+      transform-origin: 10% 10%;
+    }
+     
+    .navbar-toggler .middle-bar {
+      opacity: 0;
+    }
+     
+    .navbar-toggler .bottom-bar {
+      transform: rotate(-45deg);
+      transform-origin: 10% 90%;
+    }
+     
+    .navbar-toggler.collapsed .top-bar {
+      transform: rotate(0);
+    }
+     
+    .navbar-toggler.collapsed .middle-bar {
+      opacity: 1;
+    }
+     
+    .navbar-toggler.collapsed .bottom-bar {
+      transform: rotate(0);
+    }
+
+    .newNavbarBrand{
+      margin-left: 5px;
+    }
+    .newLocation{
+      margin-left: 40vw;
+    }
 }

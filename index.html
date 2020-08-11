@@ -17,59 +17,68 @@
     />
     <script src="https://kit.fontawesome.com/a81368914c.js"></script>
     <title>AutoCreed</title>
-    <link rel="stylesheet" href="nav.css">
-    <!-- <link rel="stylesheet" href="/css/<%= page %>.css"> -->
-</head>
-<body>
-    <section id="navigation">
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="#">
-                <img src="LOGO_PNG red.png" width="30" height="30" class="d-inline-block align-top" alt="">
-                    <span class="logo">autocreed</span>
-              </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="#">Team</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="#">Alumni</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="#">Gallery</a>
-                </li>
-                <li class="nav-item">
-                     <a class="nav-link" href="#">Support Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-               </li>
-                <!-- <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                  </a>
-                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                  </div>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li> -->
-              </ul>
+    <link rel="stylesheet" href="new.css">
 
-            </div>
-          </nav>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- <link rel="stylesheet" href="/css/<%= page %>.css"> -->
+    
+</head>
+<body id="body">
+    <section id="navigation">
+      <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-fade circle">
+
+        <a class="navbar-brand text-left" href="#" id="logo" data-aos="zoom-in-right" data-aos-duration="1000">
+            <img src="LOGO_PNG red.png" width="50" height="40" class="d-inline-block align-top imgLogo" alt="logo" >
+                <span class="logo ml-1">
+                  <span style="color: #ED372D;">auto</span>creed</span>
+          </a>
+      <div class="blurrer"></div>
+          
+
+          <button class="navbar-toggler collapsed" onclick="switchFunc()" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>				
+          </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item" >
+              <a class="nav-link text-center" href="#" id="sidebarLogo">
+                <img src="LOGO_PNG red.png" width="40" height="40" class="d-inline-block align-top Logo imgLogo" alt="">
+                <span class="logo ml-2"><span style="color: #ED372D;">auto</span>creed</span>
+                <!-- <span class="logo ml-2">autocreed</span> -->
+              </a>
+            </li>
+            <li class="nav-item active " data-aos="zoom-in-down" data-aos-duration="1000">
+              <a class="nav-link nav-link-ltr Link1" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1150">
+                 <a class="nav-link nav-link-ltr Link2" href="#">Team</a>
+            </li>
+            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1300">
+                 <a class="nav-link nav-link-ltr Link3" href="#">Alumni</a>
+            </li>
+            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1450">
+                 <a class="nav-link nav-link-ltr Link4" href="#">Gallery</a>
+            </li>
+            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1600">
+                 <a class="nav-link nav-link-ltr Link5" href="#">Support</a>
+            </li>
+            <li class="nav-item" data-aos="zoom-in-down" data-aos-duration="1750">
+                <a class="nav-link nav-link-ltr Link6" href="#">Contact</a>
+           </li>
+
+          </ul>
+
+        </div>
+      </nav>
     </section>
+
+  
+  
 
    
     <!-- Optional JavaScript -->
@@ -80,15 +89,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script>
-        $('[data-toggler="slide-collapse"]').on('click', function() {
-        alert('hi');
 
-            $navMenuCont = $($(this).data('target'));
-            $navMenuCont.animate({
-                'width': 'toggle'
-            }, 350);
-        });
+    <script src="nav.js"></script>
+
+    <script>
+      AOS.init();
     </script>
 </body>
 </html>
