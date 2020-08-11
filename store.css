@@ -374,7 +374,8 @@
 
 /* card layout  */
 #store .cart{
-   margin-top: 100px!important;
+   margin-top: 90px!important;
+   margin-left: 10px;
 }
 #store .card{
     position: relative;
