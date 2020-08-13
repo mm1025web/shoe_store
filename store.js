@@ -34,7 +34,7 @@ $(".remove").hide();
        $input.val("1"); //sets value of number of products to 1
 
 
-       $('.btn-cart').removeClass("bounce").addClass("bounce");
+       $('.btn-cart').removeClass("bounce2").addClass("bounce");
   });
 
   //function to remove product from the cart
@@ -50,7 +50,7 @@ $(".remove").hide();
 
       $($(this).siblings()[2]).show();
       $(this).hide();
-      $('.btn-cart').removeClass("bounce2").addClass("bounce2");
+      $('.btn-cart').removeClass("bounce").addClass("bounce2");
       
   });
   // choosing number of products to be bought (+/-)
@@ -109,3 +109,9 @@ $('.plus').click(function () {
             // $('.donate').hide();
         $('.donate').css("right", "-100%");
     });
+    $('.icon2').click(function(){ 
+      $('.inside').removeClass('ins');  
+    }); 
+    $('.icon').click(function(){ 
+      $(this).closest('.inside').addClass('ins');  
+    }); 

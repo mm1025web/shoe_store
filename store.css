@@ -528,28 +528,16 @@
     cursor:pointer;
 
  }
- 
-#store .card .inside:hover {
-    width: 100%;
-    right: 0;
-    top: 0;
-    border-radius: 0;
-    height: 100%;
-    cursor:pointer;
+ #store .card .inside .contents .icon2 {
+   position: absolute;
+   right: 15px;
+   top: 15px;
+   color: white;
+   opacity: 1;
+   cursor:pointer;
+   border-radius: 50%;
+}
 
- }
- 
-#store .card .inside:hover .icon {
-    opacity: 0;
-    right: 15px;
-    top: 15px;
- }
- 
-#store .card .inside:hover .contents {
-    opacity: 1;
-    transform: scale(1);
-    transform: translateY(0);
- }
  
 #store .card .inside .contents {
     padding: 5%;
@@ -567,7 +555,27 @@
 #store .card .inside .contents p {
     font-size: 13px;
  }
+ #store .card .ins:hover {
+   width: 100%;
+   right: 0;
+   top: 0;
+   border-radius: 0;
+   height: 100%;
+   cursor:pointer;
 
+}
+
+#store .card .ins:hover .icon {
+   opacity: 0;
+   right: 15px;
+   top: 15px;
+}
+
+#store .card .ins:hover .contents {
+   opacity: 1;
+   transform: scale(1);
+   transform: translateY(0);
+}
  /* donate for small screen  */
  #store .donate h2 .closedonation{
    position: absolute;
