@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link
+  rel="stylesheet"
+  href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+  crossorigin="anonymous"
+/>
+  <title>Login Form </title>
+  <style>
+      @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html,body{
+  height: 100%;
+}
+
+body{
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: #d0d4da;
+}
+
+.signin,.signup,.forgot,.delete{
+  width: 330px;
+  background: #d0d4da;
+  border-radius: 10px;
+  padding: 40px 30px;
+  box-shadow: -3px -3px 7px #c5c5c573,
+              3px 3px 8px rgba(94, 104, 121, 0.288);
+}
+
+.signin .text,.signup .text{
+  font-size: 33px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #000;
+}
+.forgot .text,.delete .text{
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 35px;
+  color: #000;
+}
+
+.signin .field,.signup .field,.forgot .field, .delete .field{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  position: relative;
+}
+
+.field input{
+  height: 100%;
+  width: 100%;
+  padding-left: 45px;
+  font-size: 15px;
+  outline: none;
+  border: none;
+  color: #595959;
+  background: #dde1e7;
+  border-radius: 25px;
+  box-shadow: inset 2px 2px 5px #babecc,
+              inset -5px -5px 10px #ffffff73;
+}
+
+
+.signin .field:nth-child(2){
+  margin-top: 20px;
+}
+.signup .field{
+   margin: 15px 0 0 0;
+}
+.field span{
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: #595959;
+}
+.field-icon {
+  position: absolute;
+  color: #666666;
+  top: 35%;
+  right: 10px;
+  cursor: pointer;
+ }
+
+.val-pass{
+  font-size:10px;
+  text-align: left;
+  margin: 5px 0 -10px 20%;
+}
+.complete {
+  color: #5DB406;
+}
+
+.forgot-pass{
+  text-align: right;
+  margin: 10px 0 0px 5px;
+}
+
+.forgot-pass a{
+  font-size: 14px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.forgot-pass:hover a{
+  text-decoration: underline;
+}
+
+input[type="submit"]{
+  margin: 15px 0;
+  width: 100%;
+  height: 50px;
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  background: #d0d4da;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 25px;
+  box-shadow: 2px 2px 5px #5a5c66;
+}
+
+input[type="submit"]:focus{
+  color: #3498db;
+  box-shadow: inset 2px 2px 5px #a9acb4,
+              inset -5px -5px 10px #ffffff73;
+}
+
+
+.goback a{
+   font-size: 14px;
+  color: #3498db;
+   text-decoration: none;
+}
+.goback a:hover{
+  text-decoration: underline;
+}
+.sign{
+  font-size: 16px;
+  color: #595959;
+  margin: 10px 0;
+}
+
+.sign a{
+  color: #000;
+  text-decoration: none;
+}
+
+.sign a:hover{
+  text-decoration: underline;
+}
+#valid{
+  color: red;
+}
+
+.deleteAcc{
+   font-size: 14px;
+   color: #595959;
+   opacity: 0.8;
+   margin: 10px 0 0;
+ }
+ 
+ .deleteAcc a{
+   color: rgb(129, 129, 129);
+   text-decoration: none;
+ }
+ 
+ .deleteAcc a:hover{
+   text-decoration: underline;
+ }
+.logout{
+  position: absolute;
+  margin-top:10px;
+  bottom: 20px;
+  left: 48.2%;
+  display: flex;
+  justify-content: center;
+}
+  </style>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <!-- sign in form  -->
+    <div class="signin" id="signin">
+      <div class="text">Login Form</div>
+      <form action="/login" method="POST">
+        <div class="field">
+          <span class="fas fa-user"></span>
+          <input type="email" placeholder="Email" name="email" required>
+        </div>
+        <div class="field">
+          <span class="fas fa-lock"></span>
+          <input type="password" class="pwd" id="pass" name="password" placeholder="Password" required>
+          <i class="fa fa-fw fa-eye field-icon "></i>
+        </div>
+        <div class="forgot-pass"><a href="#">Forgot Password?</a></div>
+        <input type="submit" value="Login">
+        <div class="sign">Not a member?
+          <a href="#" id="sign">Signup now</a>
+        </div>
+        <div class="deleteAcc">Fed up?
+            <a href="#" id="delete">Delete account</a>
+        </div>
+      </form>
+   </div> 
+
+   <!-- sign up form -->
+  <div class="signup" id="signup">
+   <div class="text">Sign up Form</div>
+         <form action="/add" method="POST" id="form1">
+         <div class="field">
+            <span class="fas fa-user"></span>
+            <input type="text" placeholder="Name" name="name"  required>
+         </div>
+         <div class="field">
+            <span class="fas fa-envelope"></span>
+            <input type="email" placeholder="Email" name="email" id="email" onfocusout="validate()" required>
+         </div>
+         <small id="valid">Enter a valid email address</small>
+
+         <div class="field" title="Enter a password longer than 8 characters">
+          <span class="fas fa-lock"></span>
+          <input type="password" class="pwd required" id="pass" name="password" placeholder="Password" minlength="8" id="password" onclick="validatePass()"  required>
+          <i class="fa fa-fw fa-eye field-icon "></i>
+        </div> 
+        <ul class="val-pass" id="list">
+          <li class="password_length">At least 8 characters</li>
+          <li class="password_case">At least 1 uppercase and lowercase letter</li>
+          <li class="password_number">At least one number</li>
+        </ul>
+         <div class="field">
+            <span class="fas fa-id-card"></span>
+            <input type="text" placeholder="Regst. No." name="rno" minlength="15" maxlength="15"required>
+         </div>
+         
+        <input type="submit" value="Sign up" id="submit-button">
+
+         <div class="sign">Already a member?
+            <a href="#" id="login">Login now</a>
+         </div>
+         </form>
+   </div>
+
+
+          <script>
+              document.getElementById('signin').style.display = 'none';
+              document.getElementById('valid').style.display = 'none';
+              document.getElementById('list').style.display = 'none';
+
+              var emailInput = document.getElementById("email").value;
+              function ValidateEmail(mail) 
+                {
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)){
+                    // alert("You have entered an valid email address!")
+                  document.getElementById('valid').style.display = 'none';
+                  document.getElementById('email').style.border = 'none';
+                }
+                else{
+                    // alert("You have entered an invalid email address!")
+                  document.getElementById('valid').style.display = 'block';
+                  document.getElementById('email').style.border = "2px solid red";
+                }
+              }
+              function validate(){
+              var emailInput = document.getElementById("email").value;
+                    ValidateEmail(emailInput);
+            //   alert(emailInput);
+
+              }
+
+            // document.getElementById("pass").addEventListener("click", validatePass);
+
+            function validatePass() {
+                document.getElementById("list").style.display = "block";
+            }
+
+          </script>
+</body>
+</html>
